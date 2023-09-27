@@ -1,0 +1,17 @@
+article {
+  width: 90px;
+  display: grid;
+}
+
+article:nth-child(odd) {
+  background-color: black;
+  padding: 4rem;
+  
+  
+}
+
+article:nth-child(even){
+  background-color: aliceblue;
+  padding: 4rem;
+
+}
