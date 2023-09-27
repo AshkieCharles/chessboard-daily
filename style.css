@@ -29,7 +29,14 @@ article:nth-child(n + 41):nth-child(-n + 48):nth-child(odd),
 article:nth-child(n + 49):nth-child(-n + 56):nth-child(even),
 article:nth-child(n + 57):nth-child(-n + 64):nth-child(odd) {
   background-color: rgb(255, 250, 250);
+
 }
-
-
-
+article:nth-child(n + 8):nth-child(-n + 16):nth-child(odd),
+article:nth-child(n + 25):nth-child(-n + 32):nth-child(odd),
+article:nth-child(n + 41):nth-child(-n + 48):nth-child(odd),
+article:nth-child(n + 57):nth-child(-n + 64):nth-child(odd)
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 10ch;
+}
