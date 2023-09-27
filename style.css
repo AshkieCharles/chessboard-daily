@@ -1,17 +1,35 @@
-article {
-  width: 90px;
+* {
+  box-sizing: border-box;
+}
+
+section {
   display: grid;
+  /*The 8 within the repeat section gives us the 8x8 grid*/
+  grid-template-columns: repeat(8, 100px);
+  grid-template-rows: repeat(8, 100px)
+ 
 }
 
-article:nth-child(odd) {
-  background-color: black;
-  padding: 4rem;
-  
-  
+article {
+  border: solid 2px;
+  color: rgb(220, 151, 31);
+  background-color: rgb(3, 3, 3);
 }
 
-article:nth-child(even){
-  background-color: aliceblue;
-  padding: 4rem;
+/*From https://stackoverflow.com/questions/67481134/how-to-create-chekerboard-using-nth-childoddeven-with-8x8-grid*/
 
+/*This nth child selects all the 8 elements of the first */
+article:nth-child(-n + 8):nth-child(even),
+/*The first nth child on the second row keeps the pattern.*/
+article:nth-child(n + 8):nth-child(-n + 16):nth-child(odd),
+article:nth-child(n + 17):nth-child(-n + 24):nth-child(even),
+article:nth-child(n + 25):nth-child(-n + 32):nth-child(odd),
+article:nth-child(n + 33):nth-child(-n + 40):nth-child(even),
+article:nth-child(n + 41):nth-child(-n + 48):nth-child(odd),
+article:nth-child(n + 49):nth-child(-n + 56):nth-child(even),
+article:nth-child(n + 57):nth-child(-n + 64):nth-child(odd) {
+  background-color: rgb(255, 250, 250);
 }
+
+
+
