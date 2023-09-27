@@ -20,7 +20,7 @@ article {
 
 /*This nth child selects all the 8 elements of the first */
 article:nth-child(-n + 8):nth-child(even),
-/*The first nth child on the second row keeps the pattern.*/
+/*The first nth child on the second row keeps the pattern of the line before it. The second nth child selects the previous 16 but the odd nth child removes the even one and it does the same if it is the even nth child*/
 article:nth-child(n + 8):nth-child(-n + 16):nth-child(odd),
 article:nth-child(n + 17):nth-child(-n + 24):nth-child(even),
 article:nth-child(n + 25):nth-child(-n + 32):nth-child(odd),
